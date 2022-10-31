@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         String nombre = txtNombre.getText().toString();
         String apellido = txtApellido.getText().toString();
         int numero = Integer.parseInt(txtNumero.getText().toString());
-        boolean opcion = switchOpcion.isChecked();
+        boolean op = switchOpcion.isChecked();
 
         SharedPreferences preferences = getSharedPreferences("prueba", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         editor.putString("nombre", nombre);
         editor.putString("apellido", apellido);
         editor.putInt("numero", numero);
-        editor.putBoolean("opcion", opcion);
+        editor.putBoolean("opcion", op);
 
         editor.commit();
     }
